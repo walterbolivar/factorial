@@ -1,0 +1,32 @@
+// sss.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "iostream"
+#include "conio.h"
+#include "Math.h"
+
+
+using namespace std;
+  void main()
+  {float S,x;
+   int N,i,fact,flag;
+   S=0; //ACUMULADOR DE SUMA
+   flag=-1; //inicia la serie en negativo
+   fact=1;  // acumulador de producto
+
+   cout <<"ingrese el valor final de la serie: ";
+   cin>> N;
+   cout <<"ingrese el valor de x: ";
+   cin>> x;
+   for(i=1; i<=N; i=i+2)
+   {
+	   S=S+flag*(pow(x,1)/fact);
+	   fact=fact*i*(i+1);
+   }
+
+   cout<< "la suma es: " << S;
+   getch();
+    
+
+  }
